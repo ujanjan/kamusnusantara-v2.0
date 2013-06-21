@@ -1,0 +1,10 @@
+body{
+	background-color: rgb(255,191,0);
+}
+
+#container{
+	margin: auto;
+	width: 1000px;
+	position: relative;
+	
+}
