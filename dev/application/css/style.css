@@ -1,25 +1,176 @@
 
 @font-face {
-  font-family: "header";
-  src: url("../font/Trump_Town_Pro.otf");
-  src: local("☺"),
-    url("type/Trump_Town_Pro.otf") format("otf"),
- }
-
-@font-face {
-  font-family: "body";
-  src: url("../font/Sawasdee.ttf");
-  src: local("☺"),
-    url("type/Sawasdee.ttf") format("ttf"),
- }
-
-body{
-	background-color: #f9f9f9;
-	font-family: "body",georgia;
+    font-family: Sawasdee;
+    src: url('font/Sawasdee-Oblique.ttf');
 }
 
-.header{
-	margin-top:20px;
+@font-face {
+    font-family: Century;
+    src: url('font/Gothic.ttf');
+}
+@font-face {
+    font-family: CenturyB;
+    src: url('font/GothicB.ttf');
+}
+
+@font-face {
+    font-family: Trump;
+    src: url('font/Trump_Town_Pro.otf');
+}
+a{
+	text-decoration: none;
+}
+
+
+/************************************
+Login & Register 
+************************************/
+
+.body_login{
+	background-color: rgb(251,191,0);
+	border: 0px;
+}
+
+.header_login{
+	background-color: rgb(242,242,242);
+	height: 65px;
+	width: 101.3%;
+	position: relative;
+	left: -10px;
+	margin-top: 60px;
+	border-top: solid 20px rgb(255,217,102);
+	border-bottom: solid 20px rgb(255,217,102);
+}
+
+#banner{
+	margin: auto;
+	width: 260px;
+	height: 40px;
+	margin-top:12.5px;
+}
+
+.login_box{
+	background-color: rgb(242,242,242);
+	height: 280px;
+	width: 420px;
+	position: relative;
+	margin: auto;
+	margin-top: 50px;
+	border: solid 10px rgb(255,217,102);
+}
+.register_box{
+	background-color: rgb(242,242,242);
+	height: auto;
+	padding-bottom: 70px;
+	width: 620px;
+	position: relative;
+	margin: auto;
+	margin-top: 50px;
+	border: solid 10px rgb(255,217,102);
+}
+.login_head_text{
+	margin: auto;
+	margin-top:10px;
+	width: 200px;
+	font-size: 25px;
+	font-family: Sawasdee,arial;
+}
+.val_head_text{
+	margin: auto;
+	margin-top:10px;
+	width: 170px;
+	font-size: 25px;
+	font-family: Sawasdee,arial;
+}
+.register_head_text{
+	margin: auto;
+	margin-top:10px;
+	width: 300px;
+	font-size: 25px;
+	font-family: Sawasdee,arial;
+}
+
+.login_text{
+	margin: auto;
+	margin-top:10px;
+	width: 200px;
+	font-size: 15px;
+	font-family: Century,arial;
+}
+.register_text{
+	margin: auto;
+	margin-top: 5px;
+	width: 90px;
+	font-size: 15px;
+	font-family: Century,arial;
+	float: left;
+}
+.login_form{
+	margin:auto;
+	margin-top:30px;
+	width: 250px;
+}
+.register_form{
+	margin:auto;
+	margin-top:30px;
+	width: 350px;
+}
+.login_input{
+	width: 250px;
+	border:1px solid rgb(255,217,102);
+	font-family: Century,arial;
+	font-size: 17px;
+}
+.register_input{
+	width: 250px;
+	border:1px solid rgb(255,217,102);
+	font-family: Century,arial;
+	font-size: 17px;
+}
+.login_button{
+	background-color: white;
+	border:2px solid rgb(82,82,82);
+	font-family: Century,arial;
+	font-size: 12px;
+	left: 22px;
+	top: 35px;
+	width: 70px; 
+	position: relative;
+}
+.login_button:hover{
+	background-color: rgb(255,217,102)
+}
+.register_button{
+	background-color: white;
+	border:2px solid rgb(82,82,82);
+	font-family: Century,arial;
+	font-size: 12px;
+	left: 272px;
+	top: 35px;
+	width: 70px; 
+	position: relative;
+}
+.register_button:hover{
+	background-color: rgb(255,217,102)
+}
+.small_login_text{
+	color:red;
+	text-decoration:none;
+}
+#login_span{
+	font-family: CenturyB,arial;
+	font-size: 11px;
+}
+
+
+/************************************
+Contributor_page and Validator_page 
+************************************/
+.body_page{
+	background-color: #f9f9f9;
+}
+.header_page{
+	margin-top:50px;
 	width: 100%;
 	height: 107px;	
 	font-family: "header",arial,georgia;
@@ -28,213 +179,152 @@ body{
 	-moz-box-shadow: 0px 5px 5px #a9a9a9;
 	box-shadow: 0px 15px 15px #a9a9a9;
 }
-
-#headText{
-	position: relative;
-	color:white;
-	left:180px;
-	top:20px;
-	width: 700px;
+.banner_page{
+	margin-left: 50px;
+	float: left;
+}
+.text_header_page{
+	font-family: trump,arial;
+	color: white;
 	font-size: 60px;
-}
-
-
-#logohead{
 	position: relative;
-	top:-107px;
-	left:50px;
-
+	margin-left: 30px;
+	top: 10px;
 }
-.box_contain{
-	left: 50px;
+.small_text_header_page{
+	font-family: CenturyB;
 	position: relative;
-	top:-70px;
+	left: 30px;
+	color:white;
 }
-
-.left{
-	width: 50%;
-	float: left;
+.small_text_header_page span{
+	color:rgb(192,0,0);
 }
-
-#contributor{
+.page_menu{
+	font-family: CenturyB;
+	font-size: 14px;
+	float: right;
 	position: relative;
-	top:-60px;
-	left: 50px;
-	font-size: 25px;
+	top: -25px;
 }
-
-#contprofile{
-	width: 300px;
-	height: 70px;
-}
-
-.contoh{
-	width: 60px;
-	height: 60px;
-	float: left;
-	margin-right: 10px;
-	background-color:#f2f2f2;
-}
-#description{
-	position: relative;
-	top:-20px;
-	left: 50px;
-	font-size: 25px;
-}
-
-#desc{
-	background-color:#f2f2f2;
-	width: 550px;
-	height: 500px;
-	padding-top: 10px;
-	padding-left: 20px;
-	font-size: 20px;
-}
-
-.right{
-	float: left;
-}
-#category{
-	font-size: 25px;
-	position: relative;
-	top:-60px;	
-}
-#scroll{
-	height: 600px;
-	overflow: auto;
-}
-
-#scroll a{
-	text-decoration: none;
-	color:black;
-}
-
-.contcategory{
+.separator{
 	font-size: 18px;
-	padding-left: 20px;
-	padding-top: 20px;
-	margin-top: 10px;
-	width: 460px;
-	height: 80px;
-	background-color:#f2f2f2;
+	color:rgb(127,127,127);
 }
-
-.contcategory:hover{
-	background-color: rgb(252,255,50);
+.menu{
+	color:rgb(127,127,127);	
 }
-
-.contoh:hover{
-	background-color: rgb(252,255,50);
-}
-#foot{
-	position: relative;
-	top:600px;
-	left:-100px;
-}
-
-#box_scroll{
-	height: 420px;
-	width: 470px;
-	overflow: auto;
-}
-
-.box{
+.page_box{
 	background-color: rgb(242,242,242);
-	width:400px;
-	height:60px;
-	padding: 20px;
-	margin-bottom: 5px;
-}
-
-.box:hover{
-	background-color: rgb(252,255,50);
-}
-
-#contain_section{
-	height: 850px;
-}
-#contain_right{
-	background-color: rgb(242,242,242);
-	width: 550px;
-	height: 600px;
+	height: auto;
+	padding-bottom: 70px;
+	width: 620px;
 	position: relative;
-	top:-490px;
-	left:660px;
-}
-
-#first_right{
-	position: relative;
-	width: 470px;
-	height: 300px;
 	margin: auto;
-	top: 25px;
-	background-color: #ffffff;
+	margin-top: 50px;
 }
-
-#second_right{
+.input_head_text{
 	margin: auto;
-	width: 470px;
 	position: relative;
-	top:35px;
+	top: 10px;
+	width: 105px;
+	font-size: 25px;
+	font-family: Sawasdee,arial;
 }
-.s-contain{
-	background-color: #ffffff;
-	width: 150px;
-	height: 50px;
+.contributor_menu{
+	width: 160px;
+	left: 20px;
+	position: relative;
+	top: -20px;
+}
+.small_contributor_menu{
 	float: left;
-	border-radius: 8px;
+	width: 60px;
+	height: 20px;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	background-color: #FFC000;
+	font-family: Century;
 }
-#have_margin{
-	margin-right: 10px;	
-}
-
-#third_right{
+.small_contributor_separator{
+	float: left;
 	position: relative;
-	width: 470px;
-	height: 170px;
+	top: -13px;
+	color: #FFC000;
+	font-size: 32px;
+	font-family: CenturyB;
+}
+.table_input{
 	margin: auto;
-	top: 100px;
-	background-color: #ffffff;
+	width: 600px;
+	font-family: Century;
 }
-
-#foot2{
-	position: relative;
+.head_table_input{
+	font-size: 16px;
+	background-color: rgb(255,217,102);
+	text-align: center;
+}
+.body_table_input{
+	font-size: 14px;
+	background-color: rgb(249,249,249);
+}
+.term_input{
 	width: 100px;
-	left:1070px;
+	border:1px solid rgb(255,217,102);
+	font-family: Century,arial;
+	font-size: 14px;
 }
-
-/*
-	###### MAP_VIEW #########
-*/
-
-#map_section{
-	background-color: rgb(255,191,0);
+.center_column{
+	text-align: center;
 }
-#map_sentence{
-	color: #ffffff;
+.submit_term{
+	width: 60px;
+	background-color: white;
+	border:1px solid rgb(82,82,82);
+	font-family: Century,arial;
+	font-size: 14px;
 }
-#map_sentence{
-	width:960px;
-	height: 30px;
+.submit_term:hover{
+	background-color: rgb(255,206,67);
+}
+.submit_all_term{
+	width: 80px;
+	background-color: white;
+	border:1px solid rgb(82,82,82);
+	font-family: Century,arial;
+	font-size: 14px;
+	float: right;
+	margin-top: 20px;
+	margin-right: 22px;
+}
+.submit_all_term:hover{
+	background-color: rgb(255,206,67);
+}
+.revise_head_text{
 	margin: auto;
 	position: relative;
-	top: 80px;
+	top: 10px;
+	width: 145px;
+	font-size: 25px;
+	font-family: Sawasdee,arial;
 }
-#map_content{
-	display:none;
+.revise_term{
+	width: 60px;
+	background-color: rgb(255,206,67);
+	border:1px solid rgb(82,82,82);
+	font-family: Century,arial;
+	font-size: 14px;
 }
-#upper_sentence{
-	width: 370px;
-	margin: auto;
+.revise_input{
+	width: 100px;
+	border:1px solid rgb(255,217,102);
+	font-family: Century,arial;
+	font-size: 14px;
 }
-#bottom_sentence{
-	width: 470px;
-	margin: auto;
-}
-#map_container{
-	width:960px;
-	height: 380px;
-	margin: auto;
-	position: relative;
-	top:180px;
+.status_input{
+	width: 70px;
+	border:1px solid rgb(255,217,102);
+	font-family: Century,arial;
+	font-size: 14px;
 }
