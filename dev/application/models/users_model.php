@@ -48,4 +48,11 @@ class Users_model extends CI_Model
 		$ret = $this->db->query($kueri)->result_array();
 		return $ret[0]['role'];
 	}
+
+	function add_user($data)
+	{
+		extract($data);
+		$kueri = "INSERT INTO users VALUES ('$username', '$password', '$name', '$lang', '$role', '0')";
+		$this->db->query($kueri);
+	}
 }
