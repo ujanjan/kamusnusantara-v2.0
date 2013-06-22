@@ -36,9 +36,8 @@
 							</br>
 								<div>		
 									
-									<div class="register_text">Type</div>
+									<div class="register_text">Peran</div>
 									<select class="register_input">
-									  <option value="-">-</option>
 									  <option value="Contributor">Contributor</option>
 									  <option value="Validator">Validator</option>
 									</select>

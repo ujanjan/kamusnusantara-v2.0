@@ -19,5 +19,12 @@ class Languages_model extends CI_Model
 		$ret = $this->db->get('languages')->result_array();
 		return $ret[0];
 	}
+
+	function get_lang_name($lg)
+	{
+		$kueri = "SELECT name FROM languages WHERE lang_key='$lg'";
+		$ret = $this->db->query($kueri)->result_array();
+		return $ret[0]['name'];
+	}
 }
 

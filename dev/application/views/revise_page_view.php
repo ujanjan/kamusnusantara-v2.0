@@ -24,7 +24,7 @@
 						<div>
 							<p class="revise_head_text">Your Record</p>
 							<div class="contributor_menu">
-								<a href="<?=base_url()?>contributor_page"><div class="small_contributor_menu">input</div></a>
+								<a href="<?=base_url()?>contributor"><div class="small_contributor_menu">input</div></a>
 								<span class="small_contributor_separator">|</span>
 								<a href="<?=base_url()?>revise_page"><div class="small_contributor_menu"><b>view all</b></div></a>
 							</div>

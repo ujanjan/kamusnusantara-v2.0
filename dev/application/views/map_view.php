@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Survival Kit</title>
-		<link rel="stylesheet" type="text/css" href="<?=base_url()?>application/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="<?=base_url()?>application/css/survivalkit.css"/>
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>application/css/jquery.cluetip.css"/>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script type="text/javascript" src="<?=base_url()?>application/jquery/jquery.maphilight.js"></script>

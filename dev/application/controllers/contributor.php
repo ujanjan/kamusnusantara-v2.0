@@ -8,61 +8,47 @@ class Contributor extends CI_Controller
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		$this->load->model('contributors_model', 'user', true);
+		$this->load->model('users_model', 'users', true);
+		$this->load->model('languages_model', 'languages', true);
+		$this->load->model('terms_model', 'terms', true);
 	}
 
 	function index()
 	{
-		$logged_in = $this->session->userdata('logged_in');
-		if(!$logged_in){
-			redirect('contributor/login');
+		$user_session = $this->session->userdata('user_session');
+		if(!$user_session){
+			redirect('auth/login');
 			exit();
 		}
 
-		$data['username'] = $this->session->userdata('username');
+		$username = $this->session->userdata('username');
+		$lang = $this->users->get_user_lang($username);
+		$role = $this->users->get_user_role($username);
+
+		$data['username'] = $username;
+		$data['name'] = $this->users->get_user_fullname($username);
+		$data['lang'] = $lang;
+		$data['role'] = ($role == '1') ? "Kontributor" : "Validator";
+		$data['lang_name'] = $this->languages->get_lang_name($lang);
+		$data['terms'] = $this->terms->get_first3_untranslated_terms($lang);
 
 		$this->load->view('contributor_view', $data);
 	}
 
-	function login()
+	function submit_term()
 	{
-		$logged_in = $this->session->userdata('logged_in');
-		if($logged_in){
-			redirect('contributor');
+		$user_session = $this->session->userdata('user_session');
+		if(!$user_session){
+			redirect('auth/login');
 			exit();
 		}
 
-		$this->load->view('contributor_login_view');
-	}
+		extract($_POST);
 
-	function auth()
-	{
-		$logged_in = $this->session->userdata('logged_in');
-		if($logged_in){
-			redirect('contributor');
-			exit();
-		}
+		$this->terms->update_untranslated_term($lang, $id, $dar, $kontributor);
 
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
+		$data['terms'] = $this->terms->get_first3_untranslated_terms($lang);
 
-		$authed = $this->user->is_user_exist($username) && $this->user->is_user_password_match($username, $password);
-
-		if($authed){
-			$this->session->set_userdata('logged_in', true);
-			$this->session->set_userdata('username', $username);
-
-			redirect('contributor');
-		}else{
-			$this->session->set_userdata('error_message', 'Login Failed');
-			redirect('contributor/login');
-		}
-	}
-
-	function logout()
-	{
-		$this->session->unset_userdata('logged_in');
-		$this->session->unset_userdata('username');
-		redirect('contributor');
+		$this->load->view('dum_contributor', $data);
 	}
 }

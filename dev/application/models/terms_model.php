@@ -6,12 +6,38 @@ class Terms_model extends CI_Model
 	{
 		parent::__construct();
 	}
-	
-	function get_terms_in_lang_cat($lg, $cat)
+
+	function get_untranslated_terms($lg)
 	{
-		$this->db->where('cat_id', $cat);
-		$ret = $this->db->get($lg)->result_array();
+		$kueri = "SELECT * FROM $lg WHERE status = '0' ORDER BY id";
+		$ret = $this->db->query($kueri)->result_array();
 		return $ret;
 	}
-}
 
+	function get_first3_untranslated_terms($lg)
+	{
+		$kueri = "SELECT * FROM $lg WHERE status = '0' ORDER BY id LIMIT 3";
+		$ret = $this->db->query($kueri)->result_array();
+		return $ret;
+	}
+
+	function get_inactive_terms($lg)
+	{
+		$kueri = "SELECT * FROM $lg WHERE status = '1'";
+		$ret = $this->db->query($kueri)->result_array();
+		return $ret;
+	}
+
+	function get_active_terms($lg)
+	{
+		$kueri = "SELECT * FROM $lg WHERE status ='2'";
+		$ret = $this->db->query($kueri)->result_array();
+		return $ret;
+	}
+
+	function update_untranslated_term($lg, $id, $dar, $kontributor)
+	{
+		$kueri = "UPDATE $lg SET dar = '$dar', status = '1', kontributor = '$kontributor' WHERE id = '$id' AND status = '0'";
+		$this->db->query($kueri);
+	}
+}
